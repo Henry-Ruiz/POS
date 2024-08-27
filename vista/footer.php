@@ -1,14 +1,14 @@
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
+ <!-- Main Footer -->
+ <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      SISTEMA DE PUNTO DE VENTAS
+      Un sistema de punto de venta
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">Temby</a>.</strong> Universidad Autonoma Juan Misael Saracho
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">Temby</a>.</strong> All rights reserved.
   </footer>
 </div>
+<!-- ./wrapper -->
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
@@ -39,46 +39,46 @@
 <script src="assest/js/usuario.js"></script>
 <script src="assest/js/cliente.js"></script>
 <script src="assest/js/producto.js"></script>
-
 <script src="assest/js/factura.js"></script>
 
-<!-- seccion de modelos -->
+<!--===============
+seccion de modals
+=================-->
 <div class="modal fade" id="modal-default">
-        <div class="modal-dialog">
-          <div class="modal-content" id="content-default">
+  <div class="modal-dialog">
+    <div class="modal-content" id="content-default">
 
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+ 
+<div class="modal fade" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" id="content-lg">
+            
           </div>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-</div>
-<div class="modal fade" id="modal-c">
+      </div>
+      <!-- /.modal -->
 
-        <div class="modal-dialog">
-          <div class="modal-content" id="content-c">
-
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-</div>
-
-
-<!-- jquery-validation -->
+  <!-- jquery-validation -->
 <script src="assest/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="assest/plugins/jquery-validation/additional-methods.min.js"></script>
 <script src="assest/plugins/jquery-validation/localization/messages_es.js"></script>
 
 <script>
-  $(function () {
+ $(function () {
     $("#example1").DataTable({
-      "responsive": true, 
-      "lengthChange": false, 
-      "autoWidth": false,
+      "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    
   });
-
 </script>
 </body>
 </html>

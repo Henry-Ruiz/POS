@@ -14,7 +14,7 @@
       <div class="container-fluid">
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Lista de usuarios registrados</h3>
+                <h3 class="card-title">Lista de facturas</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -22,26 +22,27 @@
                   <thead>
                   <tr>
                     <th>#</th>
-                    <th>Login</th>
-                    <th>Perfil</th>
-                    <th>Estado</th>
-                    <th>Ultimo acceso</th>
-                    <th>Fecha de registro</th>
+                    <th>Razon Social</th>
+                    <th>NIT</th>
+                    <th>Direccion</th>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
                     <td>
-                    <button class="btn btn-primary" onclick="MNuevoUsuario()">Nuevo</button>
+                    <button class="btn btn-primary" onclick="MNuevoFactura()">Nuevo</button>
                     </td>
                   </tr>
                   </thead>
 
                <tbody>
                <?php
-                    $usuario=ControladorUsuario::ctrInfoUsuarios();
-foreach($usuario as $value){
+                    $factura=ControladorFactura::ctrInfoFacturas();
+foreach($factura as $value){
   ?>
 
   <tr>
-    <td> <?php echo $value["id_usuario"]; ?> </td>
-    <td> <?php echo $value["login_usuario"]; ?> </td>
+    <td> <?php echo $value["id_factura"]; ?> </td>
+    <td> <?php echo $value["login_factura"]; ?> </td>
     <td> <?php echo $value["perfil"]; ?> </td>
     <td> <?php 
     if ($value["estado"]==1){
@@ -57,10 +58,10 @@ foreach($usuario as $value){
     <td> <?php echo $value["fecha_registro"]; ?> </td>
     <td>
       <div class="btn-group">
-        <button class="btn btn-secondary" onclick="MEditUsuario(<?php echo $value["id_usuario"];?>)">
+        <button class="btn-secondary" onclick="MEditFactura(<?php echo $value["id_factura"];?>)">
           <i class="fas fa-edit"></i>
         </button>
-        <button class="btn btn-danger" onclick="MEliUsuario(<?php echo $value["id_usuario"];?>)">
+        <button class="btn-danger" onclick="MEliFactura(<?php echo $value["id_factura"];?>)">
           <i class="fas fa-trash"></i>
         </button>
 
@@ -76,11 +77,6 @@ foreach($usuario as $value){
                 </table>
               </div>
               <!-- /.card-body -->
-               
-              </div>
-            
-            <!-- /.card -->
-
        
       </div><!-- /.container-fluid -->
     </div>
