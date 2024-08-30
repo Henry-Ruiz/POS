@@ -88,10 +88,7 @@
           </table>
         </div>
         <!-- /.card-body -->
-
-        </div>
-            
-            <!-- /.card -->
+      </div>
 
       </div><!-- /.container-fluid -->
     </div>

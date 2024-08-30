@@ -11,7 +11,6 @@
       <li class="nav-item nav-link">
         <span class="badge badge-danger" id="comunSiat">Desconectado</span>
       </li>
-
     </ul>
 
     <!-- Right navbar links -->

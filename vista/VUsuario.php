@@ -76,14 +76,10 @@ foreach($usuario as $value){
                 </table>
               </div>
               <!-- /.card-body -->
-               
-              </div>
-            
-            <!-- /.card -->
-
-       
+      
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+   </div>

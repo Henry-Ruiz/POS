@@ -38,11 +38,8 @@
               </div>
               <!-- /.card-body -->
        
-              </div>
-            
-            <!-- /.card -->
-             
       </div><!-- /.container-fluid -->
+    </div>
     </div>
     <!-- /.content -->
   </div>
