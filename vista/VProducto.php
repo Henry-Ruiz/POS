@@ -88,10 +88,11 @@
           </table>
         </div>
         <!-- /.card-body -->
-      </div>
 
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  </div>
+<!-- /.card -->

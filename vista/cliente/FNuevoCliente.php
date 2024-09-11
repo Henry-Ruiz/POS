@@ -1,89 +1,110 @@
-<form action="" id="FRegCliente">
-    <div class="modal-header">
-        <h4 class="modal-title">Registro Nuevo Cliente</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
+<!-- razon_social nit_ci direccion nombre telefono email -->
 
-    <div class="form-group">
-        <label for="exampleInputBorder">Razón Social</label>
-        <input type="text" class="form-control" placeholder="" name="razon" id="razon">
+<form class="form-horizontal" action="" id="FRegCliente">
+  <div class="modal-header">
+    <h4 class="modal-title">Registro Nuevo Cliente</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="card-body">
+    <div class="form-group row">
+      <label for="razon_social" class="col-sm-3 col-form-label">Razon Social :</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="razon_social" name="razon_social" social">
+      </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputBorder">NIT</label>
-        <input type="text" class="form-control" placeholder="" name="nit" id="nit">
+    <div class="form-group row">
+      <label for="nit_ci" class="col-sm-3 col-form-label">Nit/CI :</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="nit_ci" name="nit_ci" CI">
+      </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputBorder">Dirección</label>
-        <input type="text" class="form-control" placeholder="" name="direccion" id="direccion">
+    <div class="form-group row">
+      <label for="direccion" class="col-sm-3 col-form-label">Direccion :</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="direccion" name="direccion" ion">
+      </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputBorder">Nombre</label>
-        <input type="text" class="form-control" placeholder="" name="nombre" id="nombre">
+    <div class="form-group row">
+      <label for="nombre" class="col-sm-3 col-form-label">Nombre :</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="nombre" name="nombre" ">
+      </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputBorder">Teléfono</label>
-        <input type="text" class="form-control" placeholder="" name="telefono" id="telefono">
+    <div class="form-group row">
+      <label for="telefono" class="col-sm-3 col-form-label">Telefono :</label>
+      <div class="col-sm-9">
+        <!-- pattern="[0-9]{7,8}"  -->
+        <input type="tel" class="form-control" id="telefono" name="telefono" no">
+      </div>
     </div>
-    <div class="form-group">
-        <label for="exampleInputBorder">Email</label>
-        <input type="text" class="form-control" placeholder="" name="email" id="email">
+    <div class="form-group row">
+      <label for="email" class="col-sm-3 col-form-label">Email :</label>
+      <div class="col-sm-9">
+        <input type="email" class="form-control" id="email" name="email" >
+      </div>
     </div>
-
-    </div>
-    <div class="modal-footer justify-content-between">
+  </div>
+  <!-- /.card-body -->
+  <div class="modal-footer justify-content-between">
     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
     <button type="submit" class="btn btn-primary">Guardar</button>
-    </div>
+  </div>
+  <!-- /.card-footer -->
 </form>
-
 <script>
-$(function () {
-  $.validator.setDefaults({
-    submitHandler: function () {
-      regCliente()
-    }
+  // envia los datos del formulario al controlador
+
+  $(function() {
+    $.validator.setDefaults({
+      submitHandler: function() {
+        regCliente()
+      }
+    });
+    $('#FRegCliente').validate({
+      rules: {
+
+        razon_social: {
+          required: true,
+          minlength: 3,
+        },
+        nit_ci: {
+          required: true,
+          minlength: 3
+        },
+        direccion: {
+          required: true,
+          minlength: 3
+        },
+        nombre: {
+          required: true,
+          minlength: 3
+        },
+        telefono: {
+          required: true,
+          minlength: 6,
+          //que sea solo numeros, no  caracteres
+          digits: true
+
+        },
+        email: {
+          required: true,
+          minlength: 3
+        },
+      },
+
+      errorElement: 'span',
+      errorPlacement: function(error, element) {
+        error.addClass('invalid-feedback');
+        element.closest('.form-group').append(error);
+      },
+      highlight: function(element, errorClass, validClass) {
+        $(element).addClass('is-invalid');
+      },
+      unhighlight: function(element, errorClass, validClass) {
+        $(element).removeClass('is-invalid');
+      }
+    });
   });
-  $('#FRegCliente').validate({
-    rules: {
-      razon: {
-        required: true,
-        minlength: 3,
-      },
-      nit: {
-        required: true,
-        minlength: 3,
-      },
-      direccion: {
-        required: true,
-        minlength: 3,
-      },
-      nombre: {
-        required: true,
-        minlength: 3,
-      },
-      telefono: {
-        required: true,
-        minlength: 3,
-      },
-      email: {
-        required: true,
-        minlength: 3,
-      },
-    },
-    errorElement: 'span',
-    errorPlacement: function (error, element) {
-      error.addClass('invalid-feedback');
-      element.closest('.form-group').append(error);
-    },
-    highlight: function (element, errorClass, validClass) {
-      $(element).addClass('is-invalid');
-    },
-    unhighlight: function (element, errorClass, validClass) {
-      $(element).removeClass('is-invalid');
-    }
-  });
-});
 </script>

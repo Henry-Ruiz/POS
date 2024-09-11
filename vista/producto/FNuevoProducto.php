@@ -111,10 +111,10 @@
           required: true,
           minlength: 1,
         },
-        // imgProducto: {
-        //   required: true,
-        //   minlength: 1,
-        // }
+        imgProducto: {
+          required: true,
+          minlength: 1,
+        }
       },
       errorElement: 'span',
       errorPlacement: function(error, element) {

@@ -1,11 +1,12 @@
- <!-- Main Footer -->
- <footer class="main-footer">
+<div>
+  <!-- Main Footer -->
+  <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Un sistema de punto de venta
+      SISTEMA DE PUNTO DE VENTAS
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">Temby</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">Temby</a>.</strong> Universidad Autonoma Juan Misael Saracho
   </footer>
 </div>
 <!-- ./wrapper -->

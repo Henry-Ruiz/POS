@@ -43,7 +43,7 @@
 
                         <div class="form-group col-md-3">
                             <label for="">Tipo de documento</label>
-                            <select name="tpDocumenti" id="tpDocumento" class="form-control">
+                            <select name="tpDocumento" id="tpDocumento" class="form-control">
                                 <option value="1">Ninguno</option>
                                 <option value="1">Cedula de identidad</option>
                                 <option value="5">NIT</option>
@@ -121,6 +121,11 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <!-- panel de avisos -->
+                             <div class="callout callout-info direct-chat-messanges" style="height:100px; width:290px">
+                                <span class="list-unstyled" id="panelInfo"></span>
+                             </div>
 
                         </div>
                     </div>
@@ -258,3 +263,13 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script>
+    setTimeout(()=>{
+        verificarVigenciaCufd()
+    }, 4000)
+
+    setTimeout(()=>{
+        extraerLeyenda()
+    }, 5000)
+</script>
