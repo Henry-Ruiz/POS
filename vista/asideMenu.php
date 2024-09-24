@@ -11,7 +11,6 @@
       <li class="nav-item nav-link">
         <span class="badge badge-danger" id="comunSiat">Desconectado</span>
       </li>
-
     </ul>
 
     <!-- Right navbar links -->
@@ -32,7 +31,7 @@
     <!-- Brand Logo -->
     <a href="inicio" class="brand-link">
       <img src="assest/dist/img/Logo_POS.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Sistema POS</span>
+      <span class="brand-text font-weight-light">Sistema</span>
     </a>
 
     <!-- Sidebar -->
@@ -44,6 +43,7 @@
         </div>
         <div class="info">
           <a href="#" class="d-block" id="usuarioLogin"><?php echo $_SESSION["login"]?></a>
+          <input type="hidden" id="idUsuario" value="<?php echo $_SESSION["idUsuario"]?>;">
         </div>
       </div>
 
@@ -51,6 +51,8 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
