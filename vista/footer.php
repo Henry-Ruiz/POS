@@ -1,12 +1,11 @@
-<div>
-  <!-- Main Footer -->
-  <footer class="main-footer">
+ <!-- Main Footer -->
+ <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      SISTEMA DE PUNTO DE VENTAS
+      Un sistema de punto de venta
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2024 <a href="https://adminlte.io">Temby</a>.</strong> Universidad Autonoma Juan Misael Saracho
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">Henry Ruiz</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -59,6 +58,17 @@ seccion de modals
 <div class="modal fade" id="modal-lg">
         <div class="modal-dialog modal-lg">
           <div class="modal-content" id="content-lg">
+            
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+      <div class="modal fade" id="modal-xl">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content" id="content-xl">
             
           </div>
           <!-- /.modal-content -->
